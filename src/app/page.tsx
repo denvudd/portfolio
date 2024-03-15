@@ -6,7 +6,7 @@ import { BackgroundBeams } from "@/components/background-beams";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
-export const products = [
+const products = [
   {
     title: "Ivan Peklin",
     link: "https://ivanpeklin-racing.com/en",
