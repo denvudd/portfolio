@@ -5,6 +5,7 @@ import { Tabs } from "@/components/tabs";
 import { BackgroundBeams } from "@/components/background-beams";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { Metadata } from "next";
 
 const products = [
   {
@@ -102,3 +103,16 @@ export default function Home() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Dmytro Yurin - Front End Developer",
+  description:
+    "I build beautiful products with the latest technologies and frameworks.",
+  openGraph: {
+    images: [
+      {
+        url: "https://web-developer.in.ua/assets/articles/react/react-top/react-top.png",
+      },
+    ],
+  },
+};
