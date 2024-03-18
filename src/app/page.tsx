@@ -87,10 +87,10 @@ export default function Home() {
             about how challenging it is to be a developer these days? Feel free
             to reach out, and we can discuss it all over a cup of coffee!
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center z-10">
             <a
               href="mailto:dmitry.yurin2020@gmail.com"
-              className={cn(buttonVariants(), "w-20 mt-4")}
+              className={cn(buttonVariants(), "w-20 mt-4 z-10")}
               target="_blank"
               rel="noopener noreferrer"
             >
