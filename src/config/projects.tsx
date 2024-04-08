@@ -161,6 +161,108 @@ export const projectTabs = [
     ),
   },
   {
+    title: "Cypress",
+    value: "cypress",
+    type: "web",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-lg md:-10 p-5 text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="overflow-y-auto h-full">
+          <p className="text-lg font-bold text-muted-foreground">Fullstack</p>
+          <Link
+            href="https://cypress-r2o0.onrender.com/"
+            className="text-xl md:text-4xl font-bold mt-2 inline-flex gap-3 items-center hover:text-muted-foreground transition-colors"
+          >
+            Cypress SaaS <ExternalLink className="w-6 h-6" />
+          </Link>
+          <div className="flex gap-2 flex-wrap items-center mt-4">
+            <Badge variant="secondary">Next.js</Badge>
+            <Badge variant="secondary">Typescript</Badge>
+            <Badge variant="secondary">Supabase</Badge>
+            <Badge variant="secondary">Drizzle</Badge>
+            <Badge variant="secondary">Postgres</Badge>
+            <Badge variant="secondary">Stripe</Badge>
+            <Badge variant="secondary">Tailwind CSS</Badge>
+            <Badge variant="secondary">Radix UI</Badge>
+            <Badge variant="secondary">Bun</Badge>
+            <Badge variant="secondary">Zod</Badge>
+            <Badge variant="secondary">React Hook Form</Badge>
+          </div>
+          <div className="flex items-center gap-2 mt-4">
+            <Link
+              href="https://cypress-r2o0.onrender.com/"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "flex items-center gap-2 text-white"
+              )}
+            >
+              <Radio />
+              Demo (Delay)
+            </Link>
+            <Link
+              href="https://github.com/denvudd/cypress"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "flex items-center gap-2 text-white"
+              )}
+            >
+              <FaGithub className="w-5 h-5" />
+              Github
+            </Link>
+          </div>
+          <div className="mt-4 space-y-2 border-t pt-4 border-border">
+            <div className="h-[300px] md:h-[550px] w-full relative mb-4">
+              <Image
+                src="/assets/projects/cypress.png"
+                fill
+                quality={100}
+                className="object-contain object-center absolute h-full w-full inset-0 rounded-md"
+                alt="Plura"
+              />
+            </div>
+            <h3 className="font-semibold text-xl">
+              SaaS Notion Clone with Realtime cursors, Nextjs 13, Stripe,
+              Drizzle ORM, Tailwind, Supabase, Sockets
+            </h3>
+            <div className="rounded-md border-red-500 text-red-500 border p-4 font-medium">
+              <h5>Caution!</h5>
+              <p>
+                Unfortunately, there is a delay of 1 minute before the cold
+                start of the application. It&apos;s not me but a Render free tier. I
+                can&apos;t deploy this app on Vercel because they don&apos;t support web
+                sockets and serverless, so I deployed it on Render (because it&apos;s
+                free).
+              </p>
+            </div>
+            <p className="font-medium text-lg">Features in this application.</p>
+            <ul className="pl-4 space-y-1">
+              <li>🤯 Real-time cursors</li>
+              <li>📝 Real-time text selection</li>
+              <li>⏱️ Real-time database and collaboration</li>
+              <li>🟢 Real-time presence</li>
+              <li>🗑️ Move to trash functionality</li>
+              <li>😜 Custom emoji picker</li>
+              <li>🌙 Light mode dark mode</li>
+              <li>🚨 Next.js 13 app router</li>
+              <li>🗺️ Creating free plan restrictions</li>
+              <li>💰 Take monthly payments</li>
+              <li>📧 Custom email 2FA invitation</li>
+              <li>⚡️ Supabase Row level policy</li>
+              <li>👨‍👨‍👧‍👦 Real-time Collaboration</li>
+              <li>👾 Deployment</li>
+              <li>🤑 Custom Rich text editor</li>
+              <li>📚 Update profile settings</li>
+              <li>📍 Manage payments in a portal</li>
+              <li>🔐 Custom Authentication</li>
+              <li>✳️ Websockets</li>
+              <li>📣 Optimistic UI</li>
+              <li>📱 Responsive design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
     title: "TMDB",
     value: "tmdb",
     type: "web",
