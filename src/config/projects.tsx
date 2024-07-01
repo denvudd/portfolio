@@ -682,69 +682,6 @@ export const projectTabs = [
     ),
   },
   {
-    title: "Mifu",
-    value: "mifu",
-    type: "web",
-    content: (
-      <div className="w-full overflow-hidden relative h-full rounded-lg md:-10 p-5 text-white bg-gradient-to-br from-purple-700 to-violet-900">
-        <div className="overflow-y-auto h-full">
-          <p className="text-lg font-bold text-muted-foreground">Front-End</p>
-          <Link
-            href="https://hippodigital.co.uk/"
-            className="text-xl md:text-4xl font-bold mt-2 inline-flex gap-3 items-center hover:text-muted-foreground transition-colors"
-          >
-            Mifu CRM
-            <ExternalLink className="w-6 h-6" />
-          </Link>
-          <div className="flex gap-2 flex-wrap items-center mt-4">
-            <Badge variant="secondary">Next.js</Badge>
-            <Badge variant="secondary">Typescript</Badge>
-            <Badge variant="secondary">Amplify AWS</Badge>
-            <Badge variant="secondary">React Query</Badge>
-            <Badge variant="secondary">Chakra UI</Badge>
-            <Badge variant="secondary">i18n</Badge>
-            <Badge variant="secondary">Apex Charts</Badge>
-          </div>
-          <div className="flex items-center gap-2 mt-4">
-            <Link
-              href="https://www.mifu.co.uk/"
-              className={cn(
-                buttonVariants({ variant: "default" }),
-                "flex items-center gap-2 text-white"
-              )}
-            >
-              <Radio />
-              Demo
-            </Link>
-          </div>
-          <div className="mt-4 space-y-2 border-t pt-4 border-border">
-            <div className="h-[300px] md:h-[550px] w-full relative mb-4">
-              <Image
-                src="/assets/projects/mifu.png"
-                fill
-                quality={100}
-                className="object-contain object-center absolute h-full w-full inset-0 rounded-md"
-                alt="Su"
-              />
-            </div>
-            <h3 className="font-semibold text-xl">Mifu CRM & Website</h3>
-            <p>
-              &quot;AI-driven campaign creation, operation and analysis to help
-              your business reach targeted customers for less. Mifu enables
-              micro-influencer marketing at scale, with zero hassle.&quot;
-            </p>
-            <p>
-              Mifu assists in collaboration between brands and influencers. Mifu
-              features Role-Based Authorization and advanced functionality, such
-              as chat, statistics display, client management, contract signing,
-              and more.
-            </p>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-  {
     title: "Airbnb",
     value: "airbnb",
     type: "mobile",
