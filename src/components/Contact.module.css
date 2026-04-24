@@ -1,0 +1,38 @@
+.inner { max-width: 700px; }
+
+.big {
+  font-size: clamp(40px, 6vw, 90px);
+  font-weight: 700; line-height: 1;
+  letter-spacing: -0.04em;
+  margin-top: 1.5rem;
+}
+
+.big span { color: var(--accent); }
+
+.sub {
+  font-size: 1rem; color: var(--muted); margin-top: 1.5rem;
+  max-width: 480px; line-height: 1.65; font-weight: 300;
+}
+
+.links {
+  display: flex; gap: 0.75rem; margin-top: 2.5rem; flex-wrap: wrap;
+}
+
+.emailBtn { font-size: 0.9rem; }
+
+.social {
+  width: 44px; height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 0.8rem; font-family: var(--mono);
+  transition: border-color 0.2s, color 0.2s, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.social:hover {
+  border-color: var(--accent); color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .links { flex-wrap: wrap; }
+}

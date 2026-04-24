@@ -1,0 +1,45 @@
+.timeline {
+  margin-top: 4rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.item {
+  position: relative;
+  padding: 0 0 3.5rem 2.5rem;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: -4.5px; top: 6px;
+  width: 9px; height: 9px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.period {
+  font-family: var(--mono); font-size: 0.7rem; color: var(--accent);
+}
+
+.role {
+  font-size: 1.3rem; font-weight: 700; margin-top: 0.25rem;
+}
+
+.company {
+  font-size: 0.9rem; color: var(--muted); margin-top: 0.1rem;
+  font-family: var(--mono);
+}
+
+.desc {
+  font-size: 0.9rem; color: var(--muted); line-height: 1.65;
+  margin-top: 0.75rem; font-weight: 300;
+}

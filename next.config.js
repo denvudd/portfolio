@@ -1,10 +1,8 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: [
-        "aceternity.com",
-      ],
-    },
-    reactStrictMode: false,
-  };
-  
-  module.exports = nextConfig;
+  images: {
+    remotePatterns: [],
+  },
+};
+
+module.exports = nextConfig;

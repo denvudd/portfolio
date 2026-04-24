@@ -1,148 +1,82 @@
-import Link from "next/link";
-import React from "react";
-import { ModeToggle } from "./ui/ModeToggle";
-import { TbBrandTelegram } from "react-icons/tb";
-import { cn } from "@/lib/utils";
-import { Button, buttonVariants } from "./ui/button";
-import { BiLogoGmail } from "react-icons/bi";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { MenuIcon } from "lucide-react";
+"use client";
 
-interface NavbarProps {}
+import { useState, useEffect } from "react";
+import { useTheme } from "./ThemeProvider";
+import styles from "./Navbar.module.css";
 
-const Navbar: React.FC<NavbarProps> = ({}) => {
+const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"];
+
+export function Navbar() {
+  const { theme, toggle } = useTheme();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollTo = (id: string) => {
+    setMenuOpen(false);
+    document.getElementById(id.toLowerCase())?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <header className="z-40 backdrop-saturate-[180%] bg-background/90 backdrop-blur-[10px] shadow-sm fixed top-0 left-0 right-0 h-16 px-6 flex items-center justify-between border-b">
-      <h1 className="text-2xl font-bold">Dmytro Yurin</h1>
-      <nav>
-        <div className="sm:flex hidden items-center gap-2 md:gap-4">
-          <a
-            href="https://t.me/denvudd"
-            target="_blank"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "flex items-center gap-2"
-            )}
-            rel="noopener noreferrer"
-          >
-            <TbBrandTelegram className="h-[1.2rem] w-[1.2rem]" />
-            <span className="md:inline hidden">Telegram</span>
-          </a>
-          <a
-            href="mailto:dmitry.yurin2020@gmail"
-            target="_blank"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "flex items-center gap-2"
-            )}
-            rel="noopener noreferrer"
-          >
-            <BiLogoGmail className="h-[1.2rem] w-[1.2rem]" />
-            <span className="md:inline hidden">Gmail</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/yurindmytro/"
-            target="_blank"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "flex items-center gap-2"
-            )}
-            rel="noopener noreferrer"
-          >
-            <FaLinkedinIn className="h-[1.2rem] w-[1.2rem]" />
-            <span className="md:inline hidden">LinkedIn</span>
-          </a>
-          <a
-            href="https://github.com/denvudd"
-            target="_blank"
-            className={cn(
-              buttonVariants({ variant: "outline" }),
-              "flex items-center gap-2"
-            )}
-            rel="noopener noreferrer"
-          >
-            <FiGithub className="h-[1.2rem] w-[1.2rem]" />
-            <span className="md:inline hidden">Github</span>
-          </a>
-          <ModeToggle />
-        </div>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="flex sm:hidden">
-              <MenuIcon className="h-[1.2rem] w-[1.2rem]" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle className="text-2xl">Dmytro Yurin</SheetTitle>
-              <SheetDescription>I build things for web</SheetDescription>
-            </SheetHeader>
-            <div className="flex flex-col gap-4 mt-4">
-              <a
-                href="https://t.me/denvudd"
-                target="_blank"
-                className={cn(
-                  buttonVariants({ variant: "outline" }),
-                  "flex items-center justify-between gap-2 w-full"
-                )}
-                rel="noopener noreferrer"
-              >
-                <TbBrandTelegram className="h-[1.2rem] w-[1.2rem]" />
-                <span className="">Telegram</span>
-              </a>
-              <a
-                href="mailto:dmitry.yurin2020@gmail"
-                target="_blank"
-                className={cn(
-                  buttonVariants({ variant: "outline" }),
-                  "flex items-center justify-between gap-2 w-full"
-                )}
-                rel="noopener noreferrer"
-              >
-                <BiLogoGmail className="h-[1.2rem] w-[1.2rem]" />
-                <span className="">Gmail</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/yurindmytro/"
-                target="_blank"
-                className={cn(
-                  buttonVariants({ variant: "outline" }),
-                  "flex items-center justify-between gap-2 w-full"
-                )}
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="h-[1.2rem] w-[1.2rem]" />
-                <span className="">LinkedIn</span>
-              </a>
-              <a
-                href=""
-                target="_blank"
-                className={cn(
-                  buttonVariants({ variant: "outline" }),
-                  "flex items-center justify-between gap-2 w-full"
-                )}
-                rel="noopener noreferrer"
-              >
-                <FiGithub className="h-[1.2rem] w-[1.2rem]" />
-                <span className="https://github.com/denvudd">Github</span>
-              </a>
-            </div>
-          </SheetContent>
-        </Sheet>
-      </nav>
-    </header>
-  );
-};
+    <>
+      <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+        <div className={styles.logo}>denvudd</div>
 
-export default Navbar;
+        <nav className={styles.links}>
+          {NAV_LINKS.map((l) => (
+            <button key={l} className={styles.link} onClick={() => scrollTo(l)}>
+              {l}
+            </button>
+          ))}
+          <button className={styles.themeBtn} onClick={toggle} aria-label="Toggle theme">
+            {theme === "dark" ? "☀" : "☾"}
+          </button>
+          <a href="mailto:dmitry.yurin2020@gmail.com" className="btn-primary" style={{ padding: "0.45rem 1rem", fontSize: "0.78rem" }}>
+            Hire me
+          </a>
+        </nav>
+
+        <button
+          className={styles.mobileToggle}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? (
+            <svg width={18} height={18} viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path d="M2 2l14 14M16 2L2 16" />
+            </svg>
+          ) : (
+            <svg width={18} height={18} viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path d="M2 4h14M2 9h14M2 14h14" />
+            </svg>
+          )}
+        </button>
+      </header>
+
+      {/* Mobile menu */}
+      <div className={`${styles.mobileNav} ${menuOpen ? styles.open : ""}`}>
+        {NAV_LINKS.map((l, i) => (
+          <button
+            key={l}
+            className={styles.mobileLink}
+            onClick={() => scrollTo(l)}
+            style={{ transitionDelay: `${i * 0.05}s` }}
+          >
+            0{i + 1} — {l}
+          </button>
+        ))}
+        <a href="mailto:dmitry.yurin2020@gmail.com" className="btn-primary" style={{ marginTop: "1.5rem", width: "fit-content" }}>
+          Hire me
+        </a>
+      </div>
+    </>
+  );
+}

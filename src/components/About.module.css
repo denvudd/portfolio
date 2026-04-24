@@ -1,0 +1,51 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.text p + p { margin-top: 1.2rem; }
+.text strong { color: var(--text); font-weight: 500; }
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-content: start;
+}
+
+.statCard {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 2px;
+  transition: border-color 0.3s;
+}
+
+.statCard:hover { border-color: var(--accent); }
+
+.statNum {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-family: var(--mono);
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+}
