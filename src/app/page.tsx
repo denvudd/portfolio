@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Navbar";
+import { NavbarHeader } from "@/components/NavbarHeader";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavbarHeader />
       <main>
         <Hero />
         <div className="divider" />

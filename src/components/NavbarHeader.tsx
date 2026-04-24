@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "./ThemeProvider";
-import styles from "./Navbar.module.css";
+import styles from "./NavbarHeader.module.css";
 
 const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"];
 
-export function Navbar() {
+export function NavbarHeader() {
   const { theme, toggle } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
