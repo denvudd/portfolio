@@ -10,6 +10,7 @@
   line-height: 1.75;
   color: var(--muted);
   font-weight: 300;
+  text-wrap: pretty;
 }
 
 .text p + p { margin-top: 1.2rem; }
@@ -37,6 +38,7 @@
   line-height: 1;
   color: var(--accent);
   font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
 }
 
 .statLabel {

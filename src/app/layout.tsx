@@ -5,11 +5,11 @@ import { Cursor } from "@/components/Cursor";
 import { ParticleCanvas } from "@/components/ParticleCanvas";
 
 export const metadata: Metadata = {
-  title: "Dmytro Yurin — Front-End Engineer",
+  title: "Dmytro Yurin — Fullstack Engineer",
   description:
-    "Front-End Engineer with 2+ years of experience building scalable, modern web applications. React, Next.js, TypeScript specialist.",
+    "Front-End Engineer with 3+ years of experience building scalable, modern applications. React, Next.js, TypeScript specialist.",
   openGraph: {
-    title: "Dmytro Yurin — Front-End Engineer",
+    title: "Dmytro Yurin — Fullstack Engineer",
     description: "Building scalable, modern web applications.",
     url: "https://denvudd.dev",
     siteName: "Dmytro Yurin Portfolio",

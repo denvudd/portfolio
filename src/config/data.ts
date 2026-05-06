@@ -17,6 +17,13 @@ export interface ExperienceItem {
 
 export const PROJECTS: Project[] = [
   {
+    title: "Mifu",
+    type: "Front-End",
+    url: "https://www.mifu.io/",
+    img: "/assets/projects/mifu.jpg",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Chakra UI", "AWS Cognito"],
+  },
+  {
     title: "Sendora [Pet]",
     type: "Fullstack",
     url: "https://www.sendora.forum/",
@@ -29,7 +36,7 @@ export const PROJECTS: Project[] = [
     type: "Front-End",
     url: "https://koorpro.com/",
     img: "/assets/projects/koor-pro.jpg",
-    tags: ["React", "TypeScript", "CSS Modules", "MUI", "React Router"],
+    tags: ["React", "TypeScript", "CSS Modules", "MUI", "React Router", "Firebase"],
   },
   {
     title: "Plura [Pet]",
@@ -38,6 +45,13 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/denvudd/plura",
     img: "/assets/projects/plura.png",
     tags: ["Next.js", "TypeScript", "Stripe", "Prisma", "MySQL", "Bun"],
+  },
+  {
+    title: "Sieben Umzuge",
+    type: "Front-End",
+    url: "https://sieben-umzuege.de/de",
+    img: "/assets/projects/su.png",
+    tags: ["Next.js", "TypeScript", "Redux", "Recharts", "Vite", "i18n", "Ant Design"],
   },
   {
     title: "Djinni Clone [Pet]",
@@ -56,26 +70,19 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "TypeScript", "RTK Query", "Jest", "Ant Design"],
   },
   {
-    title: "Ivan Peklin",
-    type: "Front-End",
-    url: "https://ivanpeklin-racing.com/en",
-    img: "/assets/projects/peklin.png",
-    tags: ["Next.js", "React", "TypeScript", "i18n", "Ant Design"],
-  },
-  {
-    title: "Sieben Umzuge",
-    type: "Front-End",
-    url: "https://sieben-umzuege.de/de",
-    img: "/assets/projects/su.png",
-    tags: ["Next.js", "TypeScript", "Redux", "Recharts", "Vite"],
-  },
-  {
     title: "Cypress SaaS [Pet]",
     type: "Fullstack",
     url: "https://cypress-r2o0.onrender.com/",
     github: "https://github.com/denvudd/cypress",
     img: "/assets/projects/cypress.png",
     tags: ["Next.js", "Supabase", "Drizzle", "Stripe", "Sockets"],
+  },
+  {
+    title: "Ivan Peklin",
+    type: "Front-End",
+    url: "https://ivanpeklin-racing.com/en",
+    img: "/assets/projects/peklin.png",
+    tags: ["Next.js", "React", "TypeScript", "i18n", "Ant Design"],
   },
   {
     title: "Vantazhivochka",
@@ -106,18 +113,25 @@ export const SKILLS_SECONDARY = [
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    period: "2023 — Present",
-    role: "Front-End Engineer",
+    period: "Oct 2024 — Present",
+    role: "Fullstack Engineer",
     company: "Admiral Studios",
-    desc: "Built scalable web applications for enterprise clients across UK, Germany and Ukraine. Led frontend architecture decisions on 5+ production projects including CRM systems, SaaS platforms and corporate websites. Worked closely with design and product teams to bridge implementation with business goals.",
-    stack: ["Next.js", "React", "TypeScript", "Redux", "Ant Design", "SCSS"],
+    desc: "Led end-to-end front-end development of a large-scale recruiting platform (similar to LinkedIn), refactored ~70% of a highly legacy codebase, migrated the application to TypeScript and Next.js. Participated in React Native, Vue/Nuxt, Nest.js, and Python (Fast API) projects",
+    stack: ["Next.js", "React", "TypeScript", "Vue.js", "Nest.js", "Fast API", "React Native"],
   },
   {
-    period: "2022 — 2023",
+    period: "May 2024 — Sep 2024",
+    role: "Front-End Engineer",
+    company: "Red Rocket Software",
+    desc: "Developed core functionality for an internal Healthcare product (similar to Helsi) with a team of 5+ developers. Mentored and led a front-end internship program for 1-2 interns",
+    stack: ["Next.js", "React", "TypeScript", "Vue.js", "Nuxt.js"],
+  },
+  {
+    period: "Jun 2023 — May 2024",
     role: "Front-End Developer",
-    company: "Freelance",
-    desc: "Designed and developed client-facing web applications and websites. Built fullstack projects with Next.js and Node.js, including custom booking systems, CRM dashboards, and real-time collaboration tools.",
-    stack: ["React", "Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
+    company: "Luna Edge",
+    desc: "Served as the sole Lead Front-end Developer in a UK startup focused on influencer–brand collaboration. Implemented new core features, including RBAC, Stripe-based payments, and a paywall system.",
+    stack: ["React", "Next.js", "Typescript"],
   },
 ];
 

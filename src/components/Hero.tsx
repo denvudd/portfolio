@@ -15,11 +15,20 @@ function HireMeBtn() {
       className={`btn-primary ${styles.ctaBtn}`}
       onClick={(e) => {
         e.preventDefault();
-        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("projects")
+          ?.scrollIntoView({ behavior: "smooth" });
       }}
     >
       View Work
-      <svg width={14} height={14} viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth={2}>
+      <svg
+        width={14}
+        height={14}
+        viewBox="0 0 14 14"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
         <path d="M2 7h10M8 3l4 4-4 4" />
       </svg>
     </a>
@@ -52,12 +61,18 @@ export function Hero() {
       <div className={styles.name}>
         <span className={styles.nameLine}>
           <span className={styles.nameInner}>
-            <span className="glitch-wrap" data-text="DMYTRO">DMYTRO</span>
+            <span className="glitch-wrap" data-text="DMYTRO">
+              DMYTRO
+            </span>
           </span>
         </span>
         <span className={styles.nameLine}>
           <span className={styles.nameInner}>
-            <span className="glitch-wrap" data-text="YURIN" style={{ color: "var(--accent)" }}>
+            <span
+              className="glitch-wrap"
+              data-text="YURIN"
+              style={{ color: "var(--accent)" }}
+            >
               YURIN
             </span>
           </span>
@@ -66,10 +81,12 @@ export function Hero() {
 
       <div className={styles.footer}>
         <div className={styles.desc}>
-          <p className={styles.role}>// Front-End Engineer</p>
+          <p className={styles.role}>
+            // <ScrambleText text="Fullstack Engineer" active={true} />
+          </p>
           <p className={styles.bio}>
-            Building scalable, modern web applications — from robust UI
-            components to performance-conscious architectures.
+            Building scalable, modern applications — from robust UI components
+            to performance-conscious architectures.
           </p>
         </div>
 
@@ -80,7 +97,11 @@ export function Hero() {
 
         <div
           className={styles.scroll}
-          onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() =>
+            document
+              .getElementById("about")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
         >
           <span>scroll</span>
           <div className={styles.scrollLine} />

@@ -28,7 +28,7 @@ export function NavbarHeader() {
   return (
     <>
       <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-        <div className={styles.logo}>denvudd</div>
+        <div className={styles.logo}>Dmytro Yurin</div>
 
         <nav className={styles.links}>
           {NAV_LINKS.map((l) => (
@@ -61,7 +61,6 @@ export function NavbarHeader() {
         </button>
       </header>
 
-      {/* Mobile menu */}
       <div className={`${styles.mobileNav} ${menuOpen ? styles.open : ""}`}>
         {NAV_LINKS.map((l, i) => (
           <button

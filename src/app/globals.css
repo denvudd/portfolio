@@ -47,6 +47,8 @@ body {
   overflow-x: hidden;
   cursor: none;
   transition: background 0.4s, color 0.4s;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body.cursor-hover #cur-dot {
@@ -71,7 +73,6 @@ button {
   font-family: var(--font);
 }
 
-/* ─── Scroll reveal ──────────────────────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -100,7 +101,6 @@ button {
   transition-delay: 0.5s;
 }
 
-/* ─── Glitch ─────────────────────────────────────────────────────────────── */
 .glitch-wrap {
   position: relative;
   display: inline-block;
@@ -177,7 +177,6 @@ button {
   }
 }
 
-/* ─── Scrollline ─────────────────────────────────────────────────────────── */
 @keyframes scrollline {
   0% {
     transform: scaleY(0);
@@ -197,7 +196,6 @@ button {
   }
 }
 
-/* ─── Pulse ──────────────────────────────────────────────────────────────── */
 @keyframes pulse {
   0%,
   100% {
@@ -208,7 +206,6 @@ button {
   }
 }
 
-/* ─── Cursor ─────────────────────────────────────────────────────────────── */
 #cur-dot {
   width: 6px;
   height: 6px;
@@ -238,7 +235,6 @@ button {
   transition: border-color 0.3s, width 0.2s, height 0.2s, opacity 0.2s;
 }
 
-/* ─── Layout ─────────────────────────────────────────────────────────────── */
 .divider {
   height: 1px;
   background: var(--border);
@@ -276,9 +272,9 @@ section {
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1;
+  text-wrap: balance;
 }
 
-/* ─── Buttons ────────────────────────────────────────────────────────────── */
 .btn-primary {
   padding: 0.75rem 1.75rem;
   background: var(--accent);
@@ -299,6 +295,10 @@ section {
 
 .btn-primary:hover {
   box-shadow: 0 0 30px rgba(0, 232, 122, 0.4);
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
 }
 
 .btn-outline {
@@ -324,7 +324,10 @@ section {
   color: var(--accent);
 }
 
-/* ─── Skill tags ─────────────────────────────────────────────────────────── */
+.btn-outline:active {
+  transform: scale(0.96);
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -350,7 +353,6 @@ section {
   transform: translateY(-2px);
 }
 
-/* ─── Footer ─────────────────────────────────────────────────────────────── */
 footer {
   padding: 2rem 2.5rem;
   border-top: 1px solid var(--border);
@@ -362,7 +364,6 @@ footer {
   color: var(--muted);
 }
 
-/* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   section {
     padding: 4rem 1.25rem;

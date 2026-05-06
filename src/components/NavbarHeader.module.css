@@ -14,10 +14,20 @@
 }
 
 .scrolled {
-  background: var(--surface);
+  /* Blur */
+  backdrop-filter: blur(16px);
+  background: rgba(8, 8, 8, 0.7);
+}
+
+.scrolled:hover {
+  background: rgba(8, 8, 8, 1);
 }
 
 [data-theme='light'] .nav {
+  background: rgba(244, 240, 234, 0.8);
+}
+
+[data-theme='light'] .scrolled {
   background: rgba(244, 240, 234, 0.8);
 }
 
